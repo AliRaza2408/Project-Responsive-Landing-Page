@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Switch between Pepsi, Fanta, FizzUp, and ColaNext — pure CSS theme switching.">
+    <title>Brand Theme Switcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <input type="radio" name="theme" id="t-pepsi" class="tr" checked>
+    <input type="radio" name="theme" id="t-fanta" class="tr">
+    <input type="radio" name="theme" id="t-fizzup" class="tr">
+    <input type="radio" name="theme" id="t-colanext" class="tr">
+
+    <div class="glow g1" aria-hidden="true"></div>
+    <div class="glow g2" aria-hidden="true"></div>
+    <div class="glow g3" aria-hidden="true"></div>
+
+    <!-- NavBar Section -->
+    <header class="nav" role="banner">
+        <!-- Nav Logo  -->
+        <a href="#" class="nav__brand">
+            <div class="logo-wrap nav__logo">
+                <img data-t="pepsi" src="images/Pepsi_logo.png" alt="Pepsi">
+                <img data-t="fanta" src="images/Fanta_logo.png" alt="Fanta">
+                <img data-t="fizzup" src="images/FizzUp_logo.png" alt="FizzUp">
+                <img data-t="colanext" src="images/ColaNext_logo.png" alt="ColaNext">
+            </div>
+
+            <!-- Nav Name  -->
+            <span class="nav__name">
+                <span data-t="pepsi">Pepsi</span>
+                <span data-t="fanta">Fanta</span>
+                <span data-t="fizzup">FizzUp</span>
+                <span data-t="colanext">ColaNext</span>
+            </span>
+        </a>
+
+        <!-- Nav Links  -->
+        <ul class="nav__links">
+            <li><a href="#about" class="nav__link">About</a></li>
+            <li><a href="#services" class="nav__link">Features</a></li>
+            <li><a href="#contact" class="nav__link">Contact</a></li>
+            <li><a href="#" class="nav__btn">Buy Product</a></li>
+        </ul>
+
+        <!-- Making Menu for Small Screen size  -->
+        <button class="nav__toggle" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </header>
+
+    <!-- Theme pills -->
+    <div class="theme-bar" role="tablist" aria-label="Brand theme selector">
+        <label for="t-pepsi" class="theme-pill pp-pepsi" role="tab">
+            <span class="pdot pd-pepsi"></span>
+            <span class="plbl">Pepsi</span>
+        </label>
+
+        <label for="t-fanta" class="theme-pill pp-fanta" role="tab">
+            <span class="pdot pd-fanta"></span>
+            <span class="plbl">Fanta</span>
+        </label>
+
+        <label for="t-fizzup" class="theme-pill pp-fizzup" role="tab">
+            <span class="pdot pd-fizzup"></span>
+            <span class="plbl">FizzUp</span>
+        </label>
+
+        <label for="t-colanext" class="theme-pill pp-colanext" role="tab">
+            <span class="pdot pd-colanext"></span>
+            <span class="plbl">ColaNext</span>
+        </label>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero__content">
+            <p class="hero__tag">
+                <span data-t="pepsi">Carbonated Soft Drink</span>
+                <span data-t="fanta">Fruity Carbonated Drink</span>
+                <span data-t="fizzup">Carbonated Lemon Flavoured Soft Drink</span>
+                <span data-t="colanext">Next-Gen Carbonated Cola</span>
+            </p>
+
+            <h1 class="hero__title">
+                <span class="hero__title--main">
+                    <span data-t="pepsi">Pepsi</span>
+                    <span data-t="fanta">Fanta</span>
+                    <span data-t="fizzup">FizzUp</span>
+                    <span data-t="colanext">ColaNext</span>
+                </span>
+                <span class="hero__title--sub">
+                    <span data-t="pepsi">Classic</span>
+                    <span data-t="fanta">Orange</span>
+                    <span data-t="fizzup">Next</span>
+                    <span data-t="colanext">Original</span>
+                </span>
+            </h1>
+            <div class="hero__list">
+                <div class="tg" data-t="pepsi">
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Sugar Syrup</span>
+                        <span class="hero__list-val">150 cL</span>
+                    </div>
+                    
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Caffeine</span>
+                        <span class="hero__list-val">10 g</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Carbonated Water</span>
+                        <span class="hero__list-val">330 mL</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Caramel Color</span>
+                        <span class="hero__list-val">E150d</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Phosphoric Acid</span>
+                        <span class="hero__list-val">0.6 g</span>
+                    </div>
+                </div>
+
+                <div class="tg" data-t="fanta">
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Carbonated Water</span>
+                        <span class="hero__list-val">330 mL</span>
+                    </div>
+                    
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Sugar</span>
+                        <span class="hero__list-val">35 g</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Orange Juice</span>
+                        <span class="hero__list-val">8%</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Citric Acid</span>
+                        <span class="hero__list-val">E330</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Natural Flavours</span>
+                        <span class="hero__list-val">Included</span>
+                    </div>
+                </div>
+                <div class="tg" data-t="fizzup">
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Carbonated Water</span>
+                        <span class="hero__list-val">250 mL</span>
+                    </div>
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Sugar</span>
+                        <span class="hero__list-val">26 g</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Lemon Juice</span>
+                        <span class="hero__list-val">3.5%</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Citric Acid</span>
+                        <span class="hero__list-val">E330</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Natural Lemon Flavour</span>
+                        <span class="hero__list-val">Included</span>
+                    </div>
+                </div>
+
+                <div class="tg" data-t="colanext">
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Carbonated Water</span>
+                        <span class="hero__list-val">330 mL</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Sugar</span>
+                        <span class="hero__list-val">35 g</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Caffeine</span>
+                        <span class="hero__list-val">32 mg</span>
+                        </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Caramel Color</span>
+                        <span class="hero__list-val">E150d</span>
+                    </div>
+
+                    <div class="hero__list-item">
+                        <span class="hero__list-key">Natural Cola Flavour</span>
+                        <span class="hero__list-val">Proprietary</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="hero__desc">
+                <span data-t="pepsi">Pepsi Classic delivers a refreshing burst of bold flavour with the perfect balance
+                    of carbonation and sweetness. Crafted with care since 1893.</span>
+                <span data-t="fanta">Fanta Orange bursts with the sunny taste of real oranges — bubbly, sweet, and
+                    impossibly refreshing. The drink that turns every moment into a party.</span>
+                <span data-t="fizzup">FizzUp Next delivers a bold citrus punch with every sip — crisp lemon flavour,
+                    electrifying fizz, and a thumbs-up taste that keeps you coming back for more.</span>
+                <span data-t="colanext">ColaNext reimagines the classic cola experience for a new era — bolder fizz,
+                    cleaner ingredients, and a taste profile engineered for the modern palate.</span>
+            </p>
+            <div class="hero__bottom">
+                <a href="#" class="btn-buy" role="button">Buy Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <span class="hero__victory">
+                    <span data-t="pepsi">Victory</span>
+                    <span data-t="fanta">Playful</span>
+                    <span data-t="fizzup">Thumbs Up</span>
+                    <span data-t="colanext">Future</span>
+                </span>
+            </div>
+        </div>
+        <div class="hero__visual">
+            <div class="hero__can-single" data-t="pepsi">
+                <div class="hero__can hero__product">
+                    <img class="hero__product-img" alt="Pepsi Classic — 155 mL can with water droplets"
+                        src="images/Pepsi_Hero.png">
+                </div>
+            </div>
+
+            <div class="hero__can-single" data-t="fanta">
+                <div class="hero__can hero__product">
+                    <img class="hero__product-img" alt="Fanta Orange can" src="images/Fanta_Hero.png">
+                </div>
+            </div>
+
+            <div class="hero__can-single" data-t="fizzup">
+                <div class="hero__can hero__product">
+                    <img class="hero__product-img" alt="FizzUp Next — 250 mL can" src="images/FizzUp_Hero.png">
+                </div>
+            </div>
+            <div class="hero__can-single" data-t="colanext">
+                <div class="hero__can hero__product">
+                    <img class="hero__product-img" alt="ColaNext Original can" src="images/ColaNext_Hero.png">
+                </div>
+            </div>
+
+            <div class="hero__volume">
+                <div class="hero__volume-num">
+                    <span data-t="pepsi">330 mL</span>
+                    <span data-t="fanta">330 mL</span>
+                    <span data-t="fizzup">250 mL</span>
+                    <span data-t="colanext">330 mL</span>
+                </div>
+                <div class="hero__volume-sub">
+                    <span data-t="pepsi">Big Can</span>
+                    <span data-t="fanta">Standard Can</span>
+                    <span data-t="fizzup">Compact Can</span>
+                    <span data-t="colanext">Sleek Can</span>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+    <div class="hero__bar">
+        <span class="hero__bar-slogan">
+            <span data-t="pepsi">Everyone's Favourite</span>
+            <span data-t="fanta">Taste the Fun</span>
+            <span data-t="fizzup">Fizz Up Your Day</span>
+            <span data-t="colanext">Next Level Cola</span>
+        </span>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <p class="section-label">
+            <span data-t="pepsi">About Pepsi</span>
+            <span data-t="fanta">About Fanta</span>
+            <span data-t="fizzup">About FizzUp</span>
+            <span data-t="colanext">About ColaNext</span>
+        </p>
+
+        <h2 class="section-title">
+            <span data-t="pepsi">A Legacy of<br>Refreshing Taste</span>
+            <span data-t="fanta">Born from<br>Imagination</span>
+            <span data-t="fizzup">Bold Lemon<br>Bold Spirit</span>
+            <span data-t="colanext">Cola, Reimagined<br>For Tomorrow</span>
+        </h2>
+
+        <div class="about__grid">
+            <div class="about__text">
+                <div class="tg" data-t="pepsi">
+                    <p>Born in New Bern, North Carolina in 1893, Pepsi has grown from a small-town pharmacy creation
+                        into one of the world's most iconic beverage brands. Over 130 years of innovation have shaped
+                        every sip into a moment of pure refreshment.</p>
+                    <p>Pepsi Classic stays true to its roots — the same bold cola flavour, the same unmistakable fizz,
+                        and the same commitment to quality that has made it a household name across more than 200
+                        countries worldwide.</p>
+                    <p>From ballpark stands to boardroom breaks, Pepsi Classic is there — the taste that connects
+                        generations and sparks moments of joy.</p>
+                </div>
+
+                <div class="tg" data-t="fanta">
+                    <p>Fanta was born in 1940 in Germany, created by Max Keith who needed a new drink when Coca-Cola
+                        syrup couldn't cross the Atlantic during wartime. The name "Fanta" came from the German word
+                        "Fantasie" (imagination).</p>
+                    <p>What started as a wartime necessity became a global sensation. Today, Fanta is enjoyed in over
+                        190 countries, with more than 200 unique flavours — from classic Orange to exotic local
+                        varieties.</p>
+                    <p>Every sip carries that original spirit of creativity and fun. Fanta isn't just a drink — it's an
+                        invitation to play, to imagine, to colour outside the lines.</p>
+                </div>
+
+                <div class="tg" data-t="fizzup">
+                    <p>FizzUp was born from a simple idea: what if a soft drink could make you feel like giving a thumbs
+                        up after every single sip? That spark of satisfaction became the foundation for an entirely new
+                        kind of lemon drink.</p>
+                    <p>FizzUp Next is the latest evolution — a perfectly balanced carbonated lemon formula with real
+                        lemon juice concentrate and a fizz profile that dances on your tongue. No shortcuts, no
+                        compromises.</p>
+                    <p>From school canteens to office coolers, FizzUp Next has quickly become the go-to choice for
+                        anyone who wants real fruit flavour, real refreshment, and a drink that genuinely earns that
+                        thumbs-up logo.</p>
+                </div>
+
+                <div class="tg" data-t="colanext">
+                    <p>ColaNext was founded on a radical question: what would cola taste like if we started from scratch
+                        today? Not nostalgia — innovation. Not tradition — transformation.</p>
+                    <p>Our team of flavour scientists spent two years developing a proprietary cola formula that
+                        delivers the deep, rich body you expect, but with a cleaner finish and a fizz profile that's
+                        noticeably smoother than legacy brands.</p>
+                    <p>Every ColaNext can is made from 85% recycled aluminium. Our manufacturing runs on 100% renewable
+                        energy. We believe the next generation of cola shouldn't just taste better — it should be
+                        better, period.</p>
+                </div>
+            </div>
+            <div class="about__image">
+                <img data-t="pepsi" alt="Black Pepsi" src="images/Pepsi_About.png" loading="lazy">
+                <img data-t="fanta" alt="Fresh oranges" src="images/Fanta_About.png" loading="lazy">
+                <img data-t="fizzup" alt="Fresh lemons" src="images/Fizzup_About.png" loading="lazy">
+                <img data-t="colanext" alt="Futuristic tech" src="images/ColaNext_About.jpg" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="services" id="services">
+        <p class="section-label">
+            <span data-t="pepsi">Why Pepsi</span>
+            <span data-t="fanta">Why Fanta</span>
+            <span data-t="fizzup">Why FizzUp</span>
+            <span data-t="colanext">Why ColaNext</span>
+        </p>
+
+        <h2 class="section-title">
+            <span data-t="pepsi">What Sets It Apart</span>
+            <span data-t="fanta">What Makes It Special</span>
+            <span data-t="fizzup">What Makes It Tick</span>
+            <span data-t="colanext">Engineered<br>Differently</span>
+        </h2>
+
+        <div class="services__grid">
+            <div class="tg" data-t="pepsi">
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Since 1893</h3>
+                    <p class="services__card-text">Over 130 years of perfected recipe. Every can carries forward a
+                        legacy of bold, unmistakable cola flavour.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Premium Quality</h3>
+                    <p class="services__card-text">Sourced from the finest ingredients — pure carbonated water, real
+                        sugar, and natural caramel colour for an authentic taste.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Global Reach</h3>
+                    <p class="services__card-text">Available in over 200 countries. Pepsi Classic transcends borders,
+                        languages, and cultures — a truly universal beverage.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Moments of Joy</h3>
+                    <p class="services__card-text">More than a drink — it's the soundtrack to celebrations, the spark of
+                        shared laughter, and the chill in every summer memory.</p>
+                </article>
+            </div>
+
+            <div class="tg" data-t="fanta">
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-regular fa-face-smile"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Pure Joy</h3>
+                    <p class="services__card-text">More than refreshment — Fanta delivers a burst of happiness in every
+                        sip. It's the taste of fun, freedom, and good times.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Real Orange</h3>
+                    <p class="services__card-text">Made with 8% real orange juice and natural citrus flavours. No
+                        artificial colours — just honest, fruity goodness.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <h3 class="services__card-title">200+ Flavours</h3>
+                    <p class="services__card-text">From Grape to Mango to Pineapple — Fanta offers over 200 unique
+                        flavours across the globe, many exclusive to local markets.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Instant Energy</h3>
+                    <p class="services__card-text">The classic formula delivers a quick, bubbly energy boost perfect for
+                        any moment — no caffeine needed, just pure fizz-fuelled fun.</p>
+                </article>
+            </div>
+
+            <div class="tg" data-t="fizzup">
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Real Lemon Juice</h3>
+                    <p class="services__card-text">Made with 3.5% real lemon juice concentrate — not just "lemon
+                        flavour". You can taste the difference in every sip.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Thumbs-Up Taste</h3>
+                    <p class="services__card-text">The iconic red thumbs-up isn't just a logo — it's a promise. Every
+                        batch is taste-tested to earn that seal of approval.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Electrifying Fizz</h3>
+                    <p class="services__card-text">Precision-carbonated for the perfect bubble size and intensity. Not
+                        too flat, not too aggressive — just right.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-can-food"></i>
+                    </div>
+
+                    <h3 class="services__card-title">250 mL Perfect Size</h3>
+                    <p class="services__card-text">Compact enough to carry anywhere, satisfying enough to hit the spot.
+                        The ideal portion for on-the-go refreshment.</p>
+                </article>
+            </div>
+
+            <div class="tg" data-t="colanext">
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Cleaner Formula</h3>
+                    <p class="services__card-text">No artificial preservatives. No high-fructose corn syrup. Just pure
+                        cane sugar, natural cola flavour, and ingredients you can actually pronounce.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Next-Level Fizz</h3>
+                    <p class="services__card-text">Our micro-carbonation process creates smaller, longer-lasting bubbles
+                        for a smoother mouthfeel and a fizz that lasts to the last drop.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-layer-group"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Sustainable Packaging</h3>
+                    <p class="services__card-text">85% recycled aluminium cans, plant-based inks for labelling, and 100%
+                        recyclable packaging. Every can is a step toward zero waste.</p>
+                </article>
+
+                <article class="services__card">
+                    <div class="services__icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+
+                    <h3 class="services__card-title">Global Vision</h3>
+                    <p class="services__card-text">Launching across 40+ markets in 2025. ColaNext isn't a local
+                        experiment — it's a global movement to redefine what cola can be.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <p class="section-label">
+            <span data-t="pepsi">Get In Touch</span>
+            <span data-t="fanta">Get In Touch</span>
+            <span data-t="fizzup">Get In Touch</span>
+            <span data-t="colanext">Get In Touch</span>
+        </p>
+
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact__grid">
+            <div class="contact__info">
+                <p data-t="pepsi">Have questions about Pepsi Classic, partnership opportunities, or just want to say
+                    hello? We'd love to hear from you.</p>
+                <p data-t="fanta">Got questions about Fanta, flavour suggestions, or want to collaborate? We're all ears
+                    — drop us a line anytime.</p>
+                <p data-t="fizzup">Want to stock FizzUp Next, suggest a new flavour, or just share your thumbs-up
+                    moment? We'd love to hear from you.</p>
+                <p data-t="colanext">Interested in distribution, partnerships, or just curious about ColaNext? We're
+                    building the future of cola — and we want you in on it.</p>
+
+                <div class="contact__detail">
+                    <div class="contact__detail-icon">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+
+                    <div>
+                        <div class="contact__detail-label">Location</div>
+                        <div class="contact__detail-value">
+                            <span data-t="pepsi">Purchase, NY, USA</span>
+                            <span data-t="fanta">Atlanta, GA, USA</span>
+                            <span data-t="fizzup">Mumbai, India</span>
+                            <span data-t="colanext">Berlin, Germany</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__detail">
+                    <div class="contact__detail-icon">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <div class="contact__detail-label">Email</div>
+                        <div class="contact__detail-value">
+                            <span data-t="pepsi">hello@pepsi.com</span>
+                            <span data-t="fanta">hello@fanta.com</span>
+                            <span data-t="fizzup">hello@fizzup.com</span>
+                            <span data-t="colanext">hello@colanext.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__detail">
+                    <div class="contact__detail-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+                        <div class="contact__detail-label">Phone</div>
+                        <div class="contact__detail-value">
+                            <span data-t="pepsi">+1 (800) 433-2652</span>
+                            <span data-t="fanta">+1 (800) 433-2652</span>
+                            <span data-t="fizzup">+91 22 4000 5000</span>
+                            <span data-t="colanext">+49 30 2000 4000</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact__form" action="#">
+                <div class="form__row">
+                    <div class="form__group">
+                        <label class="form__label" for="fn">First Name</label>
+                        <input class="form__input" type="text" id="fn" placeholder="Ali" required>
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="ln">Last Name</label>
+                        <input class="form__input" type="text" id="ln" placeholder="Raza" required>
+                    </div>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="em">Email</label>
+                    <input class="form__input" type="email" id="em" placeholder="ali@example.com" required>
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="sj">Subject</label>
+                    <input class="form__input" type="text" id="sj" placeholder="How can we help?">
+                </div>
+
+                <div class="form__group">
+                    <label class="form__label" for="msg">Message</label>
+                    <textarea class="form__textarea" id="msg" placeholder="Tell us what's on your mind..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">Send Message
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <div class="logo-wrap flogo">
+                    <img data-t="pepsi" src="images/Pepsi_logo.png" alt="Pepsi">
+                    <img data-t="fanta" src="images/Fanta_logo.png" alt="Fanta">
+                    <img data-t="fizzup" src="images/FizzUp_logo.png" alt="FizzUp">
+                    <img data-t="colanext" src="images/ColaNext_Logo.png" alt="ColaNext">
+                </div>
+
+                <span class="footer__name">
+                    <span data-t="pepsi">Pepsi</span>
+                    <span data-t="fanta">Fanta</span>
+                    <span data-t="fizzup">FizzUp</span>
+                    <span data-t="colanext">ColaNext</span>
+                </span>
+            </div>
+
+            <div class="footer__socials">
+                <a href="#" class="footer__social" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#" class="footer__social" aria-label="Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+
+                <a href="#" class="footer__social" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p class="footer__copy">
+                <span data-t="pepsi">&copy; 2025 PepsiCo, Inc. All rights reserved.</span>
+                <span data-t="fanta">&copy; 2025 The Coca-Cola Company. All rights reserved.</span>
+                <span data-t="fizzup">&copy; 2025 FizzUp Beverages Pvt. Ltd. All rights reserved.</span>
+                <span data-t="colanext">&copy; 2025 ColaNext GmbH. All rights reserved.</span>
+            </p>
+
+            <div class="footer__links">
+                <a href="#" class="footer__link">Privacy</a>
+                <a href="#" class="footer__link">Terms</a>
+                <a href="#" class="footer__link">Cookies</a>
+            </div>
+        </div>
+    </footer>
+
+
+
+   <script src="script.js"></script>
+
+</body>
+
+</html>
